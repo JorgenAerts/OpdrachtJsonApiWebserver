@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ title }}</title>
+</head>
+<body>
+    <h1>{{ title }}</h1>
+    <ul>
+        {% for sensor in sensors %}
+        <li>
+            <a href="/sensors/{{ loop.index0 }}">{{ sensor.name }}</a>
+        </li>
+        {% endfor %}
+    </ul>
+    <br>
+    <a href="/">Back to Home</a>
+</body>
+</html>

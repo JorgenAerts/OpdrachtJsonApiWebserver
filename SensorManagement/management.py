@@ -8,7 +8,6 @@ OpenAI, ChatGPTv4 www.chatgpt.com 15-11-2024
 
 from fastapi import FastAPI
 import requests
-import json
 
 # Make a  FastAPI-application
 app = FastAPI()

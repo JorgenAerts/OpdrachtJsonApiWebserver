@@ -4,64 +4,83 @@
             "id": 0,
             "name": "Sensor 1",
             "state": "active",
-            "location": "Antwerp"
+            "location": 2
         },
         {
             "id": 1,
             "name": "Sensor 2",
             "state": "active",
-            "location": "Ghent"
+            "location": 3
         },
         {
             "id": 2,
             "name": "Sensor 3",
             "state": "active",
-            "location": "Bruges"
+            "location": 0
         },
         {
             "id": 3,
             "name": "Sensor 4",
             "state": "active",
-            "location": "Leuven"
+            "location": 4
         },
         {
             "id": 4,
             "name": "Sensor 5",
             "state": "active",
-            "location": "Mechelen"
+            "location": 0
         },
         {
             "id": 5,
             "name": "Sensor 6",
             "state": "active",
-            "location": "Aalst"
+            "location": 1
         },
         {
             "id": 6,
             "name": "Sensor 7",
             "state": "active",
-            "location": "Hasselt"
+            "location": 3
         },
         {
             "id": 7,
             "name": "Sensor 8",
             "state": "active",
-            "location": "Kortrijk"
+            "location": 4
         },
         {
             "id": 8,
             "name": "Sensor 9",
             "state": "active",
-            "location": "Ostend"
+            "location": 2
         },
         {
             "id": 9,
             "name": "Sensor 10",
             "state": "active",
-            "location": "Sint-Niklaas"
+            "location": 1
         }
     ],
     "locations": [
-        "Antwerp", "Ghent", "Bruges", "Leuven", "Mechelen", "Aalst", "Hasselt", "Kortrijk", "Ostend", "Sint-Niklaas"
+        {
+          "id":0,
+          "location":"Antwerp"
+        },
+        {
+            "id":1,
+            "location":"Brussels"
+          },
+          {
+            "id":2,
+            "location":"Ghent"
+          },
+          {
+            "id":3,
+            "location":"Kortrijk"
+          },
+          {
+            "id":4,
+            "location":"Hasselt"
+          }
         ]
 }

@@ -2,61 +2,61 @@
     "sensors": [
         {
             "id": 0,
-            "name": "sensor1",
+            "name": "Sensor 1",
             "state": "active",
             "location": "Antwerp"
         },
         {
             "id": 1,
-            "name": "sensor2",
+            "name": "Sensor 2",
             "state": "active",
             "location": "Ghent"
         },
         {
             "id": 2,
-            "name": "sensor3",
+            "name": "Sensor 3",
             "state": "active",
             "location": "Bruges"
         },
         {
             "id": 3,
-            "name": "sensor4",
+            "name": "Sensor 4",
             "state": "active",
             "location": "Leuven"
         },
         {
             "id": 4,
-            "name": "sensor5",
+            "name": "Sensor 5",
             "state": "active",
             "location": "Mechelen"
         },
         {
             "id": 5,
-            "name": "sensor6",
+            "name": "Sensor 6",
             "state": "active",
             "location": "Aalst"
         },
         {
             "id": 6,
-            "name": "sensor7",
+            "name": "Sensor 7",
             "state": "active",
             "location": "Hasselt"
         },
         {
             "id": 7,
-            "name": "sensor8",
+            "name": "Sensor 8",
             "state": "active",
             "location": "Kortrijk"
         },
         {
             "id": 8,
-            "name": "sensor9",
+            "name": "Sensor 9",
             "state": "active",
             "location": "Ostend"
         },
         {
             "id": 9,
-            "name": "sensor10",
+            "name": "Sensor 10",
             "state": "active",
             "location": "Sint-Niklaas"
         }

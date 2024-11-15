@@ -2,14 +2,14 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>{{ title }}</title>
+    <title>Sensor List</title>
 </head>
 <body>
-    <h1>{{ title }}</h1>
+    <h1>Sensor List</h1>
     <ul>
         {% for sensor in sensors %}
         <li>
-            <a href="/sensors/{{ loop.index0 }}">{{ sensor.name }}</a>
+            <a href="/sensors/{{ sensor.id }}">{{ sensor.name }}</a>
         </li>
         {% endfor %}
     </ul>

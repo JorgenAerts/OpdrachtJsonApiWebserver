@@ -3,38 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ location.location }} - Details</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>{{ location.location }} - Location Details</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 <body>
+    <div class="container mt-5">
+        <h1>Location Details</h1>
+        
+        <div class="card">
+            <div class="card-header">
+                <h2>{{ location.location }}</h2>
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">ID: {{ location.id }}</h5>
+                <p class="card-text"><strong>Location Name:</strong> {{ location.location }}</p>
 
-    <div class="container">
-        <h1 class="mt-4">{{ location.location }} - Details</h1>
+                <h4>Sensors at this location:</h4>
+                <ul class="list-group">
+                    {% if sensors %}
+                        {% for sensor in sensors %}
+                            <li class="list-group-item">
+                                <h5>{{ sensor.name }}</h5>
+                                <p><strong>State:</strong> {{ sensor.state }}</p>
+                                <p><strong>Location:</strong> {{ sensor.location_name }}</p>
+                            </li>
+                        {% endfor %}
+                    {% else %}
+                        <li class="list-group-item">No sensors found at this location.</li>
+                    {% endif %}
+                </ul>
 
-        <p><strong>Location Name:</strong> {{ location.location }}</p>
-
-        <!-- List of sensors for this location -->
-        <h3>Sensors at this location:</h3>
-        <ul class="list-group">
-            {% for sensor in sensors %}
-                {% if sensor.location == location.id %}
-                    <li class="list-group-item">
-                        <h5>{{ sensor.name }}</h5>
-                        <p><strong>State:</strong> {{ sensor.state }}</p>
-                        <p><strong>Location ID:</strong> {{ sensor.location }}</p>
-                    </li>
-                {% endfor %}
-            {% else %}
-                <p>No sensors at this location.</p>
-            {% endfor %}
-        </ul>
-
-        <br>
-        <a href="{{ url_for('get_locations') }}" class="btn btn-secondary">Back to Locations</a>
+                <a href="/locations" class="btn btn-primary mt-3">Back to Location List</a>
+            </div>
+        </div>
     </div>
 
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Optional: Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>

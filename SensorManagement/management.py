@@ -26,6 +26,14 @@ def root():
 def get_sensors():
     return sensors  # return all sensors
 
+#Get the list of sensors
+@app.get("/locations")
+def get_locations():
+    URL = "https://my-json-server.typicode.com/JorgenAerts/OpdrachtJsonApiWebserver/locations"
+    response = requests.get(URL)  # send a request to the URL to get the locations list
+    locations = response.json()  # Puts the received json data in the locations variable.
+    return locations  # return all slocations
+
 # Route to get specific sensor
 @app.get("/sensors/{sensor_id}")
 def get_sensor(sensor_id: int):

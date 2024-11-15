@@ -17,8 +17,17 @@ def home():
 
 @app.route("/sensors")
 def get_sensors():
-
+    URL = "https://my-json-server.typicode.com/JorgenAerts/OpdrachtJsonApiWebserver/sensors"
+    response = requests.get(URL)  # send a request to the URL to get the sensors list
+    sensors = response.json()  # Puts the received json data in the sensors variable.
     return render_template("sensors.html", title="Sensors", sensors=sensors)
+
+@app.route("/locations")
+def get_locations():
+    URL = "https://my-json-server.typicode.com/JorgenAerts/OpdrachtJsonApiWebserver/locations"
+    response = requests.get(URL)  # send a request to the URL to get the sensors list
+    locations = response.json()  # Puts the received json data in the sensors variable.
+    return render_template("locations.html", title="Locations", locations=locations)
 
 # Page with that lists the sensor data from the sensor with the given id
 @app.route("/sensors/<int:id>")

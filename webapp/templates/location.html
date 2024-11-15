@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ location.location }} - Details</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1 class="mt-4">{{ location.location }} - Details</h1>
+
+        <p><strong>Location Name:</strong> {{ location.location }}</p>
+
+        <!-- List of sensors for this location -->
+        <h3>Sensors at this location:</h3>
+        <ul class="list-group">
+            {% for sensor in sensors %}
+                {% if sensor.location == location.id %}
+                    <li class="list-group-item">
+                        <h5>{{ sensor.name }}</h5>
+                        <p><strong>State:</strong> {{ sensor.state }}</p>
+                        <p><strong>Location ID:</strong> {{ sensor.location }}</p>
+                    </li>
+                {% endfor %}
+            {% else %}
+                <p>No sensors at this location.</p>
+            {% endfor %}
+        </ul>
+
+        <br>
+        <a href="{{ url_for('get_locations') }}" class="btn btn-secondary">Back to Locations</a>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

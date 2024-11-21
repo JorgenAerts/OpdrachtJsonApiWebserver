@@ -1,4 +1,10 @@
-""" Code adapted from previous exercises """
+""" 
+Code adapted from previous exercises
+
+Help with linking location names with sensors, so the data displayed shows the actual names, in stead of their id's
+OpenAI, Chatgpt; www.chatgpt.com 18-11-2024
+
+"""
 
 from flask import Flask, render_template
 import requests
